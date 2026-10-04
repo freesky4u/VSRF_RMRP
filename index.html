@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1-я гвардейская мотострелковая бригада ВС РФ | Армия RMRP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #1a1c19; }
+        
+        /* Скрытие неактивных вкладок и анимация появления */
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.4s ease-in-out; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Стилизация скроллбара под милитари стиль */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a1c19; }
+        ::-webkit-scrollbar-thumb { background: #2f4528; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #405e36; }
+    </style>
+</head>
+<body class="text-gray-300 font-sans min-h-screen flex flex-col">
+
+    <!-- Шапка приложения -->
+    <header class="bg-[#1b2616] p-6 shadow-2xl border-b-4 border-[#2f4528]">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <h1 class="text-3xl md:text-4xl font-black text-white uppercase tracking-widest drop-shadow-md">
+                1-я гвардейская мотострелковая бригада ВС РФ
+            </h1>
+            <div class="text-[#84a98c] font-bold tracking-widest hidden md:block uppercase text-sm">
+                Вооруженные силы РФ | RMRP
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигационное меню -->
+    <nav class="bg-[#111310] border-b border-[#2f4528] sticky top-0 z-20 shadow-lg">
+        <div class="max-w-6xl mx-auto flex overflow-x-auto space-x-1 p-2 scrollbar-hide">
+            <button onclick="showTab('ustav')" id="btn-ustav" class="tab-btn px-6 py-3 bg-transparent hover:bg-[#2f4528] text-gray-400 hover:text-white font-bold uppercase text-sm rounded transition-colors flex-shrink-0">
+                Устав
+            </button>
+            <button onclick="showTab('tencodes')" id="btn-tencodes" class="tab-btn px-6 py-3 bg-transparent hover:bg-[#2f4528] text-gray-400 hover:text-white font-bold uppercase text-sm rounded transition-colors flex-shrink-0">
+                Тен-коды
+            </button>
+            <button onclick="showTab('supplies')" id="btn-supplies" class="tab-btn px-6 py-3 bg-transparent hover:bg-[#2f4528] text-gray-400 hover:text-white font-bold uppercase text-sm rounded transition-colors flex-shrink-0">
+                Поставки
+            </button>
+            <button onclick="showTab('posts')" id="btn-posts" class="tab-btn active px-6 py-3 bg-[#2f4528] text-white font-bold uppercase text-sm rounded transition-colors flex-shrink-0">
+                Посты
+            </button>
+        </div>
+    </nav>
+
+    <!-- Вкладка 1: Устав (ОБНОВЛЕНО) -->
+        <section id="ustav" class="tab-content active space-y-6">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Субординация -->
+                <div class="bg-[#161a15] p-5 rounded-lg border border-[#2f4528] shadow-lg flex flex-col">
+                    <h2 class="text-xl font-bold text-white uppercase mb-4 border-b border-[#2f4528] pb-2 text-[#84a98c]">Субординация</h2>
+                    <div class="space-y-3 text-sm text-gray-300 flex-grow">
+                        <p><strong class="text-[#84a98c]">12.4.</strong> Субординация является основополагающим принципом организации военной службы и предполагает иерархическое подчинение каждого военнослужащего своему вышестоящему начальнику.</p>
+                        <p><strong class="text-[#84a98c]">12.5.</strong> В рамках субординации каждый военнослужащий обязан следовать указаниям и распоряжениям, данным его непосредственным начальством в соответствии с установленными полномочиями.</p>
+                        <p><strong class="text-[#84a98c]">12.6.</strong> Субординация распространяется на все сферы военной деятельности, включая выполнение боевых задач, поддержание военной дисциплины, соблюдение уставов и правил поведения, а также выполнение служебных обязанностей.</p>
+						<p><strong class="text-[#84a98c]">12.7.</strong> В случае возникновения разногласий или вопросов по поводу исполнения приказов или распоряжений, военнослужащий имеет право обратиться к вышестоящему начальству или к административным органам военной службы для разрешения конфликтных ситуаций или получения разъяснений.</p>
+						
+                        <!-- Запрет (Красный фон) -->
+                        <div class="mt-4 p-3 bg-[#2a1111] rounded border-l-4 border-[#ef233c] shadow-inner">
+                            <p class="text-red-100"><strong class="text-[#ef233c]">9.2.2.</strong> Запрещается невыполнение приказов командиров (начальников).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Распорядок дня -->
+                <div class="bg-[#161a15] p-5 rounded-lg border border-[#2f4528] shadow-lg flex flex-col">
+                    <h2 class="text-xl font-bold text-white uppercase mb-4 border-b border-[#2f4528] pb-2 text-[#84a98c]">Распорядок дня</h2>
+                    <div class="space-y-3 text-sm text-gray-300 flex-grow">
+                        <p><strong class="text-[#84a98c]">4.1.</strong> Распорядок дня в ВЧ №12132: Будние дни с 10:00 до 22:00; Выходные и праздничные дни с 10:00 до 21:00; Обеденный перерыв с 14:00 до 15:00.</p>
+                        <p><strong class="text-[#84a98c]">4.2.</strong> Каждый военнослужащий может быть добровольно вызван по приказу командира, во внеслужебное время.<br>
+                        <span class="text-xs text-gray-500 italic">* Примечание: во время действия особого правового режима и КОД-4 график сменяется на круглосуточный.</span></p>
+                        <p><strong class="text-[#84a98c]">4.3.</strong> Ежедневно, в 21:00 проводится вечерняя поверка. Неявка - строгое нарушение воинской дисциплины.</p>
+                        <p><strong class="text-[#84a98c]">4.5.3.</strong> После окончания служебного дня, военнослужащим со звания младший сержант разрешено покидать территорию воинской части с соблюдением служебного графика.</p>
+                        <p><strong class="text-[#84a98c]">4.7.</strong> Военнослужащим разрешено отдыхать на территории ВЧ в специально отведенных местах: казарма, раздевалка, военный госпиталь (не более 30 минут).</p>
+
+                        <!-- Запрет (Красный фон) -->
+                        <div class="mt-4 p-3 bg-[#2a1111] rounded border-l-4 border-[#ef233c] shadow-inner">
+                            <p class="text-red-100"><strong class="text-[#ef233c]">9.2.1.</strong> Запрещается самовольное оставление воинской части или места службы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Внешний вид -->
+            <div class="bg-[#161a15] p-5 rounded-lg border border-[#2f4528] shadow-lg">
+                <h2 class="text-xl font-bold text-white uppercase mb-4 border-b border-[#2f4528] pb-2 text-[#84a98c]">Внешний вид и форма одежды</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300">
+                    <div class="space-y-3">
+                        <p><strong class="text-[#84a98c]">10.2.1.</strong> Разрешена аккуратная прическа, естественного цвета. <span class="text-xs text-gray-500 italic">(До звания старшина ношение любых причесок запрещено).</span></p>
+                        <p><strong class="text-[#84a98c]">10.2.3.</strong> Ношение аккуратных и ухоженных усов и бороды разрешается военнослужащим в звании Майор и выше.</p>
+                        <p><strong class="text-[#84a98c]">10.3.1.</strong> Разрешено ношение очков для коррекции зрения. Линзы и оправа очков должны быть неяркими и однотонными (10.3.2).</p>
+                        <p><strong class="text-[#84a98c]">10.3.4.</strong> Разрешается ношение перчаток следующих цветов: черного, белого. <span class="text-xs text-gray-500 italic">(Белые перчатки разрешены при парадной форме).</span></p>
+                    </div>
+                    
+                    <!-- Запреты во внешнем виде (Красный фон) -->
+                    <div class="space-y-2 p-4 bg-[#2a1111] rounded border border-[#5a1b1b] shadow-inner">
+                        <p class="text-red-100"><strong class="text-[#ef233c]">10.2.2.</strong> Запрещены татуировки на видных частях тела (кисти рук, лицо, шея).</p>
+                        <p class="text-red-100"><strong class="text-[#ef233c]">10.2.4.</strong> Запрещено окрашивание волос в яркие или неестественные цвета.</p>
+                        <p class="text-red-100"><strong class="text-[#ef233c]">10.2.5.</strong> Запрещены татуировки на любых частях тела криминогенного характера.</p>
+                        <p class="text-red-100"><strong class="text-[#ef233c]">10.3.3.</strong> Запрещены украшения из металла и бижутерия для мужчин (кроме классических наручных часов).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Основные запреты (Полностью красный блок) -->
+            <div class="bg-[#210d0d] p-6 rounded-lg border-2 border-[#ef233c] shadow-[0_0_15px_rgba(239,35,60,0.15)]">
+                <h2 class="text-2xl font-black text-[#ef233c] uppercase mb-5 border-b border-[#5a1b1b] pb-2 flex items-center">
+                    <svg class="w-7 h-7 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    Строгие запреты (Глава IX)
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-red-100">
+                    <div class="p-3 bg-[#2a1111] rounded border-l-2 border-[#ef233c]">
+                        <strong class="text-[#ef233c]">9.2.3.</strong> Запрещается нарушение правил обращения с оружием, боеприпасами и военной техникой.
+                    </div>
+                    <div class="p-3 bg-[#2a1111] rounded border-l-2 border-[#ef233c]">
+                        <strong class="text-[#ef233c]">9.3.1.</strong> Запрещается оскорбление других военнослужащих и гражданских лиц.
+                    </div>
+                    <div class="p-3 bg-[#2a1111] rounded border-l-2 border-[#ef233c]">
+                        <strong class="text-[#ef233c]">9.3.2. / 9.3.3.</strong> Запрещается употребление нецензурной брани, использование кличек, грубое и фамильярное обращение.
+                    </div>
+                    <div class="p-3 bg-[#2a1111] rounded border-l-2 border-[#ef233c]">
+                        <strong class="text-[#ef233c]">9.3.7. / 9.3.8.</strong> Запрещается вести словесные перепалки с использованием мата, создавать конфликтные ситуации и участвовать в них.
+                    </div>
+                    <div class="p-3 bg-[#2a1111] rounded border-l-2 border-[#ef233c]">
+                        <strong class="text-[#ef233c]">9.3.9.</strong> Запрещается неуважительно относиться к военнослужащим, госслужащим и гражданским лицам.
+                    </div>
+                    <div class="p-3 bg-[#2a1111] rounded border-l-2 border-[#ef233c]">
+                        <strong class="text-[#ef233c]">9.3.6.</strong> Запрещается передвигаться по территории ВЧ на транспорте с нарушениями ПДД.
+                    </div>
+                    <div class="p-3 bg-[#2a1111] rounded border-l-2 border-[#ef233c]">
+                        <strong class="text-[#ef233c]">9.4.2. / 9.4.3.</strong> Запрещается нанесение ущерба государственному имуществу и использование служебного транспорта не по назначению.
+                    </div>
+                    <div class="p-3 bg-[#2a1111] rounded border-l-2 border-[#ef233c]">
+                        <strong class="text-[#ef233c]">9.5.2.</strong> Запрещается организация и участие в азартных играх на территории воинской части.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Полный документ (Iframe) -->
+            <div class="bg-[#161a15] p-1 rounded-lg border border-[#2f4528] shadow-lg">
+                <div class="p-4 flex flex-col sm:flex-row justify-between items-center border-b border-[#2f4528] mb-2 bg-[#1b2616] rounded-t-lg gap-4">
+                    <h2 class="text-xl font-bold text-white uppercase">Полный документ Устава</h2>
+                    <a href="https://docs.google.com/document/u/0/d/1fPQdV3uDE4Odwesx21O_wvtu0IJXc5UzdjhqA0kDt5M/mobilebasic" target="_blank" class="px-5 py-2 bg-[#2f4528] hover:bg-[#405e36] text-white text-xs md:text-sm font-bold uppercase rounded transition-colors shadow flex-shrink-0 text-center">
+                        Открыть в новой вкладке
+                    </a>
+                </div>
+                <div class="w-full h-[60vh] bg-[#f8f9fa] rounded-b-lg overflow-hidden relative">
+                    <iframe 
+                        src="https://docs.google.com/document/d/1fPQdV3uDE4Odwesx21O_wvtu0IJXc5UzdjhqA0kDt5M/preview" 
+                        class="w-full h-full border-0" 
+                        title="Устав RMRP"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Вкладка 2: Тен-коды -->
+        <section id="tencodes" class="tab-content bg-[#161a15] p-6 rounded-lg border border-[#2f4528] shadow-lg">
+            <h2 class="text-2xl font-bold text-white uppercase mb-6 border-b border-[#2f4528] pb-2">Система тен-кодов</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- 10-0 -->
+                <div class="bg-[#111310] p-5 rounded border border-[#2f4528] hover:border-[#84a98c] transition-colors">
+                    <div class="text-3xl font-black text-white mb-1">10-0</div>
+                    <div class="text-[#84a98c] font-bold uppercase text-sm mb-2 pb-2 border-b border-[#2f4528]">Отмена / Отбой</div>
+                    <p class="text-gray-400 text-sm">Отмена предыдущего приказа или действия, возврат к стандартному режиму.</p>
+                </div>
+                
+                <!-- 10-4 -->
+                <div class="bg-[#111310] p-5 rounded border border-[#2f4528] hover:border-[#84a98c] transition-colors">
+                    <div class="text-3xl font-black text-white mb-1">10-4</div>
+                    <div class="text-[#84a98c] font-bold uppercase text-sm mb-2 pb-2 border-b border-[#2f4528]">Сообщение принято, выезжаю!</div>
+                    <p class="text-gray-400 text-sm">Подтверждение получения информации или приказа с немедленным выдвижением.</p>
+                </div>
+
+                <!-- 10-6 -->
+                <div class="bg-[#111310] p-5 rounded border border-[#2f4528] hover:border-[#84a98c] transition-colors">
+                    <div class="text-3xl font-black text-white mb-1">10-6</div>
+                    <div class="text-[#84a98c] font-bold uppercase text-sm mb-2 pb-2 border-b border-[#2f4528]">Не могу выполнить / Занят</div>
+                    <p class="text-gray-400 text-sm">Невозможность выполнения приказа с обязательным указанием причины.</p>
+                </div>
+                
+                <!-- 10-20 -->
+                <div class="bg-[#111310] p-5 rounded border border-[#2f4528] hover:border-[#84a98c] transition-colors">
+                    <div class="text-3xl font-black text-white mb-1">10-20</div>
+                    <div class="text-[#84a98c] font-bold uppercase text-sm mb-2 pb-2 border-b border-[#2f4528]">Ваше местоположение</div>
+                    <p class="text-gray-400 text-sm">Запрос текущих координат другого юнита или передача своих.</p>
+                </div>
+                
+                <!-- КОД 0 (Оставлен как есть) -->
+                <div class="bg-[#1a1111] p-5 rounded border border-[#5a1b1b] hover:border-[#ef233c] transition-colors relative overflow-hidden md:col-span-2 lg:col-span-1">
+                    <div class="absolute right-[-10px] top-[-10px] opacity-10 text-[6rem] text-red-500 font-black">!</div>
+                    <div class="text-3xl font-black text-[#ef233c] mb-1">КОД 0</div>
+                    <div class="text-[#ef233c] font-bold uppercase text-sm mb-2 pb-2 border-b border-[#5a1b1b]">Угроза жизни / Поддержка</div>
+                    <p class="text-gray-400 text-sm">Необходима немедленная огневая поддержка. Все свободные юниты стягиваются на помощь.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Вкладка 3: Поставки -->
+        <section id="supplies" class="tab-content bg-[#161a15] p-6 rounded-lg border border-[#2f4528] shadow-lg">
+            <h2 class="text-2xl font-bold text-white uppercase mb-6 border-b border-[#2f4528] pb-2">Организация поставок</h2>
+            
+            <div class="text-gray-300 space-y-6">
+                
+                <div class="bg-[#111310] p-5 rounded border border-[#2f4528]">
+                    <p class="text-xl font-bold text-[#84a98c] mb-4 uppercase">Регламент проведения колонны</p>
+                    <ul class="list-disc pl-6 space-y-3">
+                        <li>Колонна должна состоять минимум из трех автомобилей сопровождения и одного грузовика с материалами (Матовоза).</li>
+                        <li>Скоростной режим: при движении в черте города скорость не должна превышать 80 км/ч, за городом — не более 120 км/ч.</li>
+                        <li>Дистанция между автомобилями в колонне должна составлять минимум 10-15 метров во избежание массовых ДТП.</li>
+                        <li>В случае вооруженного нападения матовоз обязан продолжать движение к точке назначения любыми путями, в то время как автомобили сопровождения принимают бой и перекрывают дорогу.</li>
+                        <li>Использование спецсигналов (проблесковых маячков) при движении колонны обязательно.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-[#111310] p-5 rounded border border-[#2f4528]">
+                    <p class="text-xl font-bold text-[#84a98c] mb-4 uppercase">Карта маршрута поставок</p>
+                    <div class="w-full relative">
+                        <img src="https://placehold.co/1200x600/111310/84a98c?text=КАРТА+МАРШРУТА+ПОСТАВОК" 
+                             alt="Карта поставок" 
+                             class="w-full rounded-lg border-2 border-[#2f4528] shadow-lg object-cover">
+                    </div>
+                    <p class="text-sm text-gray-500 italic mt-3">* Внимание: Маршрут является строго конфиденциальной информацией. В случае подозрений на засаду, маршрут может быть изменен решением старшего состава.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Вкладка 4: Посты -->
+        <section id="posts" class="tab-content active bg-[#161a15] p-6 rounded-lg border border-[#2f4528] shadow-lg">
+            <h2 class="text-2xl font-bold text-white uppercase mb-6 border-b border-[#2f4528] pb-2">Караульная служба и посты</h2>
+            
+            <div class="text-gray-300 space-y-6">
+                
+                <p class="text-lg bg-[#111310] p-4 rounded border-l-4 border-[#2f4528]">
+                    Несение службы на постах — важнейшая боевая обязанность военнослужащего. Постовой обязан бдительно охранять вверенную ему территорию, не допускать проникновения посторонних лиц и проверять документы у всех прибывающих. Оставление поста без уважительной причины и доклада строго запрещено.
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- КПП 1 -->
+                    <div class="bg-[#111310] p-5 rounded border border-[#2f4528] flex flex-col">
+                        <h3 class="text-[#84a98c] font-black text-xl mb-2 uppercase">КПП-1 (Главные ворота)</h3>
+                        <p class="mb-4 text-sm flex-grow">Основной контрольно-пропускной пункт базы. Отвечает за контроль въезда/выезда основного транспорта и проверку документов у всех визитеров. Ворота должны быть закрыты по умолчанию.</p>
+                        <img src="https://imgur.com/a/fIrsTsK" 
+                             alt="КПП 1" 
+                             class="w-full rounded border border-[#2f4528] shadow mt-auto">
+                    </div>
+
+                    <!-- КПП 2 -->
+                    <div class="bg-[#111310] p-5 rounded border border-[#2f4528] flex flex-col">
+                        <h3 class="text-[#84a98c] font-black text-xl mb-2 uppercase">КПП-2 (Задние ворота)</h3>
+                        <p class="mb-4 text-sm flex-grow">Контрольно-пропускной пункт №2 может использовать для проезда колонн снабжения, призывных колонн, патрулей военной полиции, командного состава бригады, правительственных кортежей.</p>
+                        <img src="https://placehold.co/600x350/161a15/84a98c?text=ФОТО+ПОСТА+КПП-2" 
+                             alt="КПП 2" 
+                             class="w-full rounded border border-[#2f4528] shadow mt-auto">
+                    </div>
+                    
+                    <!-- Вышка 1 -->
+                    <div class="bg-[#111310] p-5 rounded border border-[#2f4528] flex flex-col">
+                        <h3 class="text-[#84a98c] font-black text-xl mb-2 uppercase">Вышка 1</h3>
+                        <p class="mb-4 text-sm flex-grow">Укрепленная вышка у КПП-1. Обеспечивает дальний визуальный контроль прилегающей территории и огневую поддержку.</p>
+                        <img src="https://placehold.co/600x350/161a15/84a98c?text=ФОТО+ПОСТА+Вышка+1" 
+                             alt="Вышка 1" 
+                             class="w-full rounded border border-[#2f4528] shadow mt-auto">
+                    </div>
+                    
+                    <!-- Вышка 4 -->
+                    <div class="bg-[#111310] p-5 rounded border border-[#2f4528] flex flex-col">
+                        <h3 class="text-[#84a98c] font-black text-xl mb-2 uppercase">Вышка 4</h3>
+                        <p class="mb-4 text-sm flex-grow">Укрепленная вышка у КПП-2. Позволяет контролировать подступы к задним воротам и резервному маршруту.</p>
+                        <img src="https://placehold.co/600x350/161a15/84a98c?text=ФОТО+ПОСТА+Вышка+4" 
+                             alt="Вышка 4" 
+                             class="w-full rounded border border-[#2f4528] shadow mt-auto">
+                    </div>
+
+                    <!-- НОВЫЙ ПОСТ: Штаб -->
+                    <div class="bg-[#111310] p-5 rounded border border-[#2f4528] flex flex-col">
+                        <h3 class="text-[#84a98c] font-black text-xl mb-2 uppercase">Штаб</h3>
+                        <p class="mb-4 text-sm flex-grow">Внутренний пост по охране главного командного пункта. Доступ строго ограничен. Задача: контроль безопасности руководящего состава и секретной документации.</p>
+                        <img src="https://placehold.co/600x350/161a15/84a98c?text=ФОТО+ПОСТА+ШТАБ" 
+                             alt="Штаб" 
+                             class="w-full rounded border border-[#2f4528] shadow mt-auto">
+                    </div>
+                </div>
+
+                <!-- Пример доклада -->
+                <div class="bg-[#1b2616] border border-[#405e36] p-5 mt-4 rounded-lg relative overflow-hidden">
+                    <p class="font-bold text-white mb-4 uppercase tracking-wide border-b border-[#405e36] pb-2 inline-block">Пример обязательного доклада в рацию</p>
+                    
+                    <div class="bg-[#111310] p-4 rounded font-mono text-sm border border-[#2f4528] space-y-4">
+                        <p class="text-[#84a98c] font-bold">11.2. ВУ Стандартные формы докладов</p>
+                        
+                        <div>
+                            <p class="text-white mb-1">а) При принятии поста:</p>
+                            <p class="text-gray-400 pl-4 border-l-2 border-[#405e36]">"Докладывает: Гвардии [Звание] [Фамилия] | Пост [Название Поста] принял | Состав - [1-2-3] | Код - [1-2-3] | Доклад окончен."</p>
+                        </div>
+                        
+                        <div>
+                            <p class="text-white mb-1">б) При нахождении на посту:</p>
+                            <p class="text-gray-400 pl-4 border-l-2 border-[#405e36]">"Докладывает: Гвардии [Звание] [Фамилия] | Пост [Название Поста] | Состав - [1-2-3] | Код - [1-2-3] | Минуты - (20/40/60/80/100/120) | Доклад окончен."</p>
+                        </div>
+                        
+                        <div>
+                            <p class="text-white mb-1">в) При сдаче поста:</p>
+                            <p class="text-gray-400 pl-4 border-l-2 border-[#405e36]">"Докладывает: Гвардии [Звание] [Фамилия] | Пост [Название поста] сдал | Состав - [1-2-3] | Код - [1-2-3] | Доклад окончен."</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-3">* Доклады с постов необходимо осуществлять каждые 20 минут.</p>
+                </div>
+				               
+                <!-- УКПС 33 -->
+                <div class="bg-[#111310] p-5 rounded border border-[#2f4528]">
+                    <p class="text-lg font-bold text-[#84a98c] mb-4">УКПС 33. При несении постовой службы запрещается:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-sm text-gray-300">
+                        <li>отвлекаться от несения службы, заниматься посторонними делами, нарушать правила бдительности;</li>
+                        <li>оставлять вооружение без контроля, убирать его из рук;</li>
+                        <li>нарушать действующее законодательство, особенно в области этики;</li>
+                        <li>игнорировать запросы о состоянии поста в рацию;</li>
+                        <li>своевременно не докладывать о состоянии поста;</li>
+                        <li>нарушать требования настоящего Устава в области организации пропуска на территорию и с территории объекта;</li>
+                        <li>бездействовать при совершении преступлений и(или) правонарушений на подведомственных территориях;</li>
+                        <li>бездействовать при просьбе оказания помощи гражданам и сотрудникам в пределах компетенции.</li>
+                    </ul>
+                </div>
+                
+                <!-- УКПС 34 -->
+                <div class="bg-[#111310] p-5 rounded border border-[#2f4528]">
+                    <p class="text-lg font-bold text-[#84a98c] mb-4">УКПС 34. Обязанности военнослужащих, несущих постовую службу на контрольно-пропускном пункте №1/2:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-sm text-gray-300">
+                        <li>проверять документы у убывающих с территории части лиц, уточняя причину выезда (выхода), проверяя, по мере необходимости, действительные рапорты на увольнительные (отпуска) (за исключением: майоров и выше);</li>
+                        <li>своевременно докладывать дежурному по части, либо в органы военной полиции о нарушении Устава и законодательства в пределах поста, в том числе и военнослужащими, докладывать о самовольном оставлении места несения службы военнослужащими;</li>
+                        <li>проверять служебные документы у пребывающих военнослужащих, осматривать служебный автомобиль на предмет провоза запрещенных к провозу на территорию части предметов;</li>
+                        <li>пресекать преступления и правонарушения в пределах постах;</li>
+                        <li>пресекать попытки незаконного проникновения на территорию части;</li>
+                        <li>проверять документы у пребывающих гражданских лиц и государственных сотрудников (служащих), докладывать об их прибытии, проверять одобренные пропуска, пропускать допущенных к проходу на территорию лиц и сопровождать их на территории части либо направить к дежурному по части;</li>
+                        <li>при обращении к гражданину представляться, называя свое воинское звание, фамилию, должность и предоставлять удостоверение;</li>
+                        <li>быть вежливым и корректным при общении с гражданами, не допуская действий, унижающих честь и достоинство человека;</li>
+                        <li>сообщать по рации о прибытии или убытии командира бригады, его заместителей;</li>
+                        <li>своевременно докладывать о состоянии поста;</li>
+                        <li>соблюдать требования воинской дисциплины, правил ношения военной формы одежды и сохранять бдительность на протяжении всего времени несения службы;</li>
+                        <li>знать порядок пропускного режима и строго соблюдать требования настоящего Устава.</li>
+                    </ul>
+                </div>
+                            <!-- Полный документ (Iframe) -->
+            <div class="bg-[#161a15] p-1 rounded-lg border border-[#2f4528] shadow-lg">
+                <div class="p-4 flex flex-col sm:flex-row justify-between items-center border-b border-[#2f4528] mb-2 bg-[#1b2616] rounded-t-lg gap-4">
+                    <h2 class="text-xl font-bold text-white uppercase">Полный документ Устава КПС</h2>
+                    <a href="https://docs.google.com/document/d/1NbjVEzabFTV77eEiQUUuPTHT3ATd4QtsQotGp8Jdbds/mobilebasic" target="_blank" class="px-5 py-2 bg-[#2f4528] hover:bg-[#405e36] text-white text-xs md:text-sm font-bold uppercase rounded transition-colors shadow flex-shrink-0 text-center">
+                        Открыть в новой вкладке
+                    </a>
+                </div>
+                <div class="w-full h-[60vh] bg-[#f8f9fa] rounded-b-lg overflow-hidden relative">
+                    <iframe 
+                        src="https://docs.google.com/document/d/1NbjVEzabFTV77eEiQUUuPTHT3ATd4QtsQotGp8Jdbds/preview" 
+                        class="w-full h-full border-0" 
+                        title="Устав КПС RMRP"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Скрипты -->
+    <script>
+        /**
+         * Функция для плавного переключения вкладок.
+         * @param {string} tabId - ID секции, которую нужно показать.
+         */
+        function showTab(tabId) {
+            // 1. Скрываем весь контент вкладок
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // 2. Сбрасываем стили всех кнопок навигации к неактивному состоянию
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-[#2f4528]', 'text-white', 'active');
+                btn.classList.add('bg-transparent', 'text-gray-400');
+            });
+
+            // 3. Показываем выбранную вкладку
+            const selectedTab = document.getElementById(tabId);
+            if (selectedTab) {
+                selectedTab.classList.add('active');
+            }
+
+            // 4. Красим нажатую кнопку в активный цвет
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-transparent', 'text-gray-400');
+                activeBtn.classList.add('bg-[#2f4528]', 'text-white', 'active');
+            }
+        }
+    </script>
+</body>
+</html>
